@@ -1,12 +1,12 @@
 import React from 'react'
 import { StackScreenProps } from '@react-navigation/stack'
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { StyleSheet, Text, View } from 'react-native'
 
 import { RootStackParamList } from 'src/types'
 
-export default function NotFoundScreen ({
+export default function Screen ({
   navigation
-}: StackScreenProps<RootStackParamList, 'NotFound'>) {
+}: StackScreenProps<RootStackParamList, 'Home'>) {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Hello</Text>
