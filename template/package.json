@@ -11,7 +11,17 @@
   },
   "dependencies": {
     "react": "17.0.2",
-    "react-native": "0.65.1"
+    "react-native": "0.65.1",
+    "@react-native-async-storage/async-storage": "^1.15.4",
+    "@react-navigation/drawer": "^5.12.5",
+    "@react-navigation/native": "^5.9.4",
+    "@react-navigation/stack": "^5.14.5",
+    "react-native-gesture-handler": "^1.10.3",
+    "react-native-reanimated": "^2.1.0",
+    "react-native-safe-area-context": "^3.2.0",
+    "react-native-screens": "^3.2.0",
+    "react-native-vector-icons": "^8.1.0"
+
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
@@ -21,12 +31,25 @@
     "@types/react-native": "^0.64.5",
     "@types/react-test-renderer": "^16.9.2",
     "babel-jest": "^26.6.3",
-    "eslint": "^7.14.0",
+    "babel-plugin-module-resolver": "^4.1.0",
+    "eslint": "^7.26.0",
     "jest": "^26.6.3",
+    "husky": "^6.0.0",
+    "lint-staged": "^11.0.0",
     "metro-react-native-babel-preset": "^0.66.0",
     "react-native-codegen": "^0.0.7",
     "react-test-renderer": "17.0.2",
     "typescript": "^3.8.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "./src/**/*.ts?(x)": [
+      "eslint -c .eslintrc.js --fix"
+    ]
   },
   "resolutions": {
     "@types/react": "^17"
