@@ -2,9 +2,10 @@ import React from 'react'
 import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
 
+import { RootStackParamList } from 'src/types'
+
 import HomeScreen from 'src/screens/home'
 import AboutScreen from 'src/screens/about'
-import { RootStackParamList } from 'src/types'
 
 export default function Navigation() {
   return (
